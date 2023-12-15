@@ -13,6 +13,14 @@
     />
     <style>
       /* Custom styles for the transparent navbar */
+      footer.page-footer {
+            background-color: transparent !important; /* Set the background color for the footer */
+        }
+
+      .footer{
+        position: relative;
+        top: 100px;
+      }
       .container{
         position: relative;
         top: 200px;
@@ -94,7 +102,7 @@
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       }
       body {
-        height: 1700px;
+        height: 1750px;
         background-image: linear-gradient(
             90deg,
             rgb(237, 237, 237),
@@ -252,6 +260,35 @@
           </button>
       </form>
   </div>
+  <div class="footer">
+    <footer class="page-footer">
+      <div class="container">
+          <div class="row">
+              <!-- Contact Us -->
+              <div class="col s12 m6 l6">
+                  <h5>Contact Us</h5>
+                  <p>Email: info@example.com</p>
+                  <p>Phone: +123 456 789</p>
+                  <!-- Instagram Logo with Link -->
+                  <a href="https://www.instagram.com/" target="_blank">
+                      <img src="https://via.placeholder.com/30" alt="Instagram Logo" class="footer-icon">
+                  </a>
+                  <!-- X Logo with Link -->
+                  <a href="https://www.example.com/" target="_blank">
+                      <img src="https://via.placeholder.com/30" alt="X Logo" class="footer-icon">
+                  </a>
+              </div>
+              <!-- Working Days -->
+              <div class="col s12 m6 l6">
+                  <h5>Working Days</h5>
+                  <p><strong>Sunday:</strong> Morning 9:00 AM - 1:30 PM, Evening 5:30 PM - 9:00 PM</p>
+                  <!-- Add other days as needed -->
+                  <!-- Monday, Tuesday, etc. -->
+              </div>
+          </div>
+      </div>
+  </footer>
+  </div>
         
     </div>
 
@@ -272,5 +309,10 @@
         $(".sidenav").sidenav();
       });
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          M.AutoInit(); // Initialize Materialize components
+      });
+  </script>
   </body>
 </html>
