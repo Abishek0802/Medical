@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <style>
+      /* Custom styles for the transparent navbar */
+      .content1{
+         text-align: center;
+         color: aliceblue;
+      }
+      body {
+        height: 600px;
+        background-image: linear-gradient(
+            90deg,
+            rgb(237, 237, 237),
+            rgb(236, 236, 236)
+          ),
+          linear-gradient(
+            135deg,
+            rgb(163, 125, 62) 0%,
+            rgb(163, 125, 62) 22%,
+            rgb(149, 100, 59) 22%,
+            rgb(149, 100, 59) 32%,
+            rgb(134, 75, 56) 32%,
+            rgb(134, 75, 56) 37%,
+            rgb(120, 50, 53) 37%,
+            rgb(120, 50, 53) 51%,
+            rgb(105, 25, 50) 51%,
+            rgb(105, 25, 50) 55%,
+            rgb(91, 0, 47) 55%,
+            rgb(91, 0, 47) 100%
+          ),
+          linear-gradient(
+            112.5deg,
+            rgb(163, 125, 62) 0%,
+            rgb(163, 125, 62) 22%,
+            rgb(149, 100, 59) 22%,
+            rgb(149, 100, 59) 32%,
+            rgb(134, 75, 56) 32%,
+            rgb(134, 75, 56) 37%,
+            rgb(120, 50, 53) 37%,
+            rgb(120, 50, 53) 51%,
+            rgb(105, 25, 50) 51%,
+            rgb(105, 25, 50) 55%,
+            rgb(91, 0, 47) 55%,
+            rgb(91, 0, 47) 100%
+          ),
+          linear-gradient(
+            90deg,
+            rgb(163, 125, 62) 0%,
+            rgb(163, 125, 62) 22%,
+            rgb(149, 100, 59) 22%,
+            rgb(149, 100, 59) 32%,
+            rgb(134, 75, 56) 32%,
+            rgb(134, 75, 56) 37%,
+            rgb(120, 50, 53) 37%,
+            rgb(120, 50, 53) 51%,
+            rgb(105, 25, 50) 51%,
+            rgb(105, 25, 50) 55%,
+            rgb(91, 0, 47) 55%,
+            rgb(91, 0, 47) 100%
+          );
+        background-repeat: no-repeat;
+        background-blend-mode: overlay, overlay, overlay, normal;
+      }
+      nav.transparent {
+        background-color: transparent !important;
+        box-shadow: none;
+      }
+
+      nav.transparent a {
+        color: rgb(
+          12,
+          6,
+          6
+        ) !important; /* Change the text color to white or your preferred color */
+      }
+
+      /* Custom styles for the sidenav */
+      #sidenav-overlay {
+        display: none;
+      }
+
+      @media only screen and (max-width: 992px) {
+        /* Hide the sidenav by default on larger screens */
+        .side-nav {
+          transform: translateX(-100%);
+        }
+
+        #sidenav-overlay {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="transparent">
+      <div class="nav-wrapper">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">people</i></a
+        >
+        <a href="#" class="brand-logo right">location</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content1">
+      <img style="width: 300px; height: 300px" src="newone.png" alt="" />
+      <h3>About us</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit culpa
+        explicabo consequatur, nihil expedita, ipsa blanditiis repellendus,
+        eligendi incidunt dicta ex non doloremque perspiciatis assumenda soluta?
+        Tenetur doloribus consequatur asperiores.
+      </p>
+      <a href="">+(91)9944540222</a>
+    </div>
+
+    <!-- Side Navigation -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      // Initialize Materialize components
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
+  </body>
+</html>
