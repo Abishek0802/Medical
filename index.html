@@ -13,6 +13,11 @@
     />
     <style>
       /* Custom styles for the transparent navbar */
+      .container{
+        position: relative;
+        top: 200px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
       .sidenav {
         background-image: linear-gradient(
             90deg,
@@ -89,7 +94,7 @@
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       }
       body {
-        height: 1500px;
+        height: 1700px;
         background-image: linear-gradient(
             90deg,
             rgb(237, 237, 237),
@@ -227,7 +232,26 @@
         ratione officiis.
       </p>
     </div>
-    <div>
+    <div class="container">
+      <h4>Feedback Form</h4>
+      <form id="feedbackForm">
+          <div class="row">
+              <div class="input-field col s12">
+                  <input id="name" type="text" class="validate" required>
+                  <label for="name">Name</label>
+              </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s12">
+                  <textarea id="feedback" class="materialize-textarea" required></textarea>
+                  <label for="feedback">Feedback</label>
+              </div>
+          </div>
+          <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+          </button>
+      </form>
+  </div>
         
     </div>
 
