@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Add these lines to the head of your HTML file -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <!-- Add this to the body of your HTML file -->
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4 id="content">Hello World!</h4>
+          <div class="switch">
+            <label>
+              English
+              <input type="checkbox" id="languageToggle" />
+              <span class="lever"></span>
+              Tamil
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add this script to the end of your HTML file, just before the closing </body> tag -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize Materialize components
+        M.AutoInit();
+
+        // Get the toggle switch element
+        const languageToggle = document.getElementById("languageToggle");
+
+        // Set up event listener for language switch
+        languageToggle.addEventListener("change", function () {
+          // Get the content element
+          const contentElement = document.getElementById("content");
+
+          // Check the language toggle state and update content accordingly
+          if (languageToggle.checked) {
+            // If toggle is checked (Tamil)
+            contentElement.textContent = "வணக்கம் உலகம்!";
+          } else {
+            // If toggle is not checked (English)
+            contentElement.textContent = "Hello World!";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
