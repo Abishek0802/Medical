@@ -3,55 +3,228 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- Add these lines to the head of your HTML file -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Employee Profile</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.09) 0%,
+            rgba(0, 0, 0, 0.09) 45%,
+            rgba(29, 29, 29, 0.09) 45%,
+            rgba(29, 29, 29, 0.09) 100%
+          ),
+          linear-gradient(
+            45deg,
+            rgba(239, 239, 239, 0.07) 0%,
+            rgba(239, 239, 239, 0.07) 41%,
+            rgba(19, 19, 19, 0.07) 41%,
+            rgba(19, 19, 19, 0.07) 100%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(12, 12, 12, 0.08) 0%,
+            rgba(12, 12, 12, 0.08) 40%,
+            rgba(153, 153, 153, 0.08) 40%,
+            rgba(153, 153, 153, 0.08) 100%
+          ),
+          linear-gradient(
+            45deg,
+            rgba(2, 2, 2, 0.02) 0%,
+            rgba(2, 2, 2, 0.02) 74%,
+            rgba(113, 113, 113, 0.02) 74%,
+            rgba(113, 113, 113, 0.02) 100%
+          ),
+          linear-gradient(
+            90deg,
+            rgba(132, 132, 132, 0.03) 0%,
+            rgba(132, 132, 132, 0.03) 22%,
+            rgba(39, 39, 39, 0.03) 22%,
+            rgba(39, 39, 39, 0.03) 100%
+          ),
+          linear-gradient(
+            45deg,
+            rgba(34, 34, 34, 0.03) 0%,
+            rgba(34, 34, 34, 0.03) 76%,
+            rgba(98, 98, 98, 0.03) 76%,
+            rgba(98, 98, 98, 0.03) 100%
+          ),
+          linear-gradient(90deg, rgb(187, 187, 187), rgb(13, 13, 13));
+      }
+
+      .container {
+        margin: 20px;
+      }
+
+      .profile-card {
+        background-image: linear-gradient(0deg, #ffffff 0%, transparent 100%),
+          linear-gradient(90deg, #ffffff 0%, transparent 100%),
+          linear-gradient(
+            135deg,
+            rgba(51, 51, 51, 0.1) 0%,
+            rgba(51, 51, 51, 0.1) 66%,
+            rgba(249, 249, 249, 0.1) 66%,
+            rgba(249, 249, 249, 0.1) 100%
+          ),
+          linear-gradient(
+            0deg,
+            rgba(231, 231, 231, 0.05) 0%,
+            rgba(231, 231, 231, 0.05) 83%,
+            rgba(255, 255, 255, 0.05) 83%,
+            rgba(255, 255, 255, 0.05) 100%
+          ),
+          linear-gradient(
+            0deg,
+            rgba(32, 32, 32, 0.1) 0%,
+            rgba(32, 32, 32, 0.1) 51%,
+            rgba(138, 138, 138, 0.1) 51%,
+            rgba(138, 138, 138, 0.1) 100%
+          ),
+          linear-gradient(
+            0deg,
+            rgba(79, 79, 79, 0.07) 0%,
+            rgba(79, 79, 79, 0.07) 9%,
+            rgba(52, 52, 52, 0.07) 9%,
+            rgba(52, 52, 52, 0.07) 100%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(154, 154, 154, 0.05) 0%,
+            rgba(154, 154, 154, 0.05) 82%,
+            rgba(76, 76, 76, 0.05) 82%,
+            rgba(76, 76, 76, 0.05) 100%
+          ),
+          linear-gradient(
+            0deg,
+            rgba(226, 226, 226, 0.1) 0%,
+            rgba(226, 226, 226, 0.1) 87%,
+            rgba(158, 158, 158, 0.1) 87%,
+            rgba(158, 158, 158, 0.1) 100%
+          ),
+          linear-gradient(
+            45deg,
+            rgba(177, 177, 177, 0.1) 0%,
+            rgba(177, 177, 177, 0.1) 82%,
+            rgba(199, 199, 199, 0.1) 82%,
+            rgba(199, 199, 199, 0.1) 100%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(41, 41, 41, 0.04) 0%,
+            rgba(41, 41, 41, 0.04) 10%,
+            rgba(28, 28, 28, 0.04) 10%,
+            rgba(28, 28, 28, 0.04) 100%
+          ),
+          linear-gradient(90deg, rgb(174, 174, 174), rgb(181, 181, 181));
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-image {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        left: 30px;
+        top: 10px;
+        border-radius: 50%;
+      }
+      img {
+        border-radius: 50%;
+      }
+
+      .profile-details {
+        padding: 30px;
+      }
+
+      .profile-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .profile-position {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 20px;
+      }
+
+      .profile-info {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 600px) {
+        .profile-details {
+          padding: 10px;
+        }
+
+        .profile-name {
+          font-size: 20px;
+        }
+
+        .profile-position {
+          font-size: 16px;
+        }
+
+        .profile-info {
+          font-size: 14px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Add this to the body of your HTML file -->
     <div class="container">
       <div class="row">
-        <div class="col s12">
-          <h4 id="content">Hello World!</h4>
-          <div class="switch">
-            <label>
-              English
-              <input type="checkbox" id="languageToggle" />
-              <span class="lever"></span>
-              Tamil
-            </label>
+        <div class="col s12 m8 offset-m2">
+          <div class="profile-card">
+            <div class="profile-image z-depth-5">
+              <img
+                src="ameer.jpeg"
+                alt="Profile Picture"
+                class="responsive-img"
+              />
+            </div>
+            <div class="profile-details">
+              <div class="profile-name">Ameer</div>
+              <div>
+                <p>
+                  <i class="material-icons">location_on</i>Ashok Medical
+                  Employee
+                </p>
+                <p>
+                  <i class="material-icons">location_on</i> Villupuram,
+                  TamilNadu
+                </p>
+              </div>
+              <div class="profile-info">
+                <i class="material-icons">location_on</i>Address:
+                john.doe@example.com
+              </div>
+              <div class="profile-info">
+                <i class="material-icons">location_on</i>Phone: +1 (123)
+                456-7890
+              </div>
+              <!-- Add more profile information as needed -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Add this script to the end of your HTML file, just before the closing </body> tag -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
+      // Initialize Materialize components if needed
       document.addEventListener("DOMContentLoaded", function () {
-        // Initialize Materialize components
         M.AutoInit();
-
-        // Get the toggle switch element
-        const languageToggle = document.getElementById("languageToggle");
-
-        // Set up event listener for language switch
-        languageToggle.addEventListener("change", function () {
-          // Get the content element
-          const contentElement = document.getElementById("content");
-
-          // Check the language toggle state and update content accordingly
-          if (languageToggle.checked) {
-            // If toggle is checked (Tamil)
-            contentElement.textContent = "வணக்கம் உலகம்!";
-          } else {
-            // If toggle is not checked (English)
-            contentElement.textContent = "Hello World!";
-          }
-        });
       });
     </script>
   </body>
