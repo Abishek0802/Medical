@@ -12,6 +12,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
       /* Custom styles for the transparent navbar */
       footer.page-footer {
@@ -23,7 +25,7 @@
         .feedback{
           border-radius: 10px;
           text-align: center;
-          height: 300px;
+          height: 400px;
         }
 
       .container{
@@ -132,7 +134,7 @@
       </p>
       <a href="">+(91)9944540222</a>
     </div>
-    <div class="content2">
+    <div class="content2"  data-aos="zoom-out-up">
       <h3>Our journey</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
@@ -156,18 +158,19 @@
         ratione officiis.
       </p>
     </div>
-    <div class="container feedback black white-text">
+    <div class="container feedback black white-text"  data-aos="fade-up"
+    data-aos-duration="3000">
       <h4>Feedback Form</h4>
       <form id="feedbackForm">
           <div class="row">
               <div class="input-field col s12">
-                  <input id="name" type="text" class="validate" required>
+                  <input id="name" type="text" class="validate white-text" required>
                   <label for="name">Name</label>
               </div>
           </div>
           <div class="row">
               <div class="input-field col s12">
-                  <textarea id="feedback" class="materialize-textarea" required></textarea>
+                  <textarea id="feedback" class="materialize-textarea white-text" required></textarea>
                   <label for="feedback">Feedback</label>
               </div>
           </div>
@@ -219,7 +222,7 @@
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>EMPLOYEE</div>
       <div  class="collapsible-body"><span><a href="employeeProfile.html"> 2 Employee</a></span></div>
-      <div class="collapsible-body center"><span><a href="Update.html">UPDATE</a></span></div>
+      <div class="collapsible-body center"><span><a href="Update.html">ADD EMPLOYEE</a></span></div>
 
     </li>
     <li>
@@ -235,7 +238,11 @@
         
       
     </ul>
-
+     <!-- animations -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+      AOS.init();
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

@@ -37,6 +37,8 @@
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         height: 540px;
+        position: relative;
+        top: 150px;
       }
 
       .profile-picture {
@@ -74,18 +76,18 @@
   </head>
 
   <body>
-    <div class="profile-container update-form-container">
+    <div class="profile-container update-form-container" data-aos="zoom-in">
       <h5
         class="z-depth-3"
         style="
-          width: 44%;
+          width: 37%;
           border-radius: 3px;
           background-color: black;
           color: #fff;
           padding: 5px;
         "
       >
-        Update Profile
+        New Profile
       </h5>
       <form
         style="position: relative; top: 20px"
@@ -142,7 +144,7 @@
           type="submit"
           name="action"
         >
-          Update
+          ADD
           <i class="material-icons right">send</i>
         </button>
       </form>
