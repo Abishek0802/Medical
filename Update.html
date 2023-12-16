@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: "Arial", sans-serif;
+      }
+
+      .profile-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-image: radial-gradient(
+          circle at top right,
+          rgb(15, 54, 60) 0%,
+          rgb(15, 54, 60) 3%,
+          rgb(62, 41, 84) 3%,
+          rgb(62, 41, 84) 50%,
+          rgb(108, 28, 108) 50%,
+          rgb(108, 28, 108) 60%,
+          rgb(155, 14, 131) 60%,
+          rgb(155, 14, 131) 63%,
+          rgb(201, 1, 155) 63%,
+          rgb(201, 1, 155) 100%
+        );
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 540px;
+      }
+
+      .profile-picture {
+        width: 100%;
+        text-align: center;
+      }
+
+      .profile-picture img {
+        border-radius: 50%;
+        max-width: 150px;
+        margin-top: -75px;
+      }
+
+      .profile-details {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .profile-details h4 {
+        color: #333;
+      }
+
+      .profile-details p {
+        color: #777;
+      }
+
+      .update-form-container {
+        margin-top: 30px;
+      }
+
+      .input-field {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="profile-container update-form-container">
+      <h5
+        class="z-depth-3"
+        style="
+          width: 44%;
+          border-radius: 3px;
+          background-color: black;
+          color: #fff;
+          padding: 5px;
+        "
+      >
+        Update Profile
+      </h5>
+      <form
+        style="position: relative; top: 20px"
+        id="update-form"
+        onsubmit="validateForm(); return false;"
+      >
+        <div class="input-field">
+          <input
+            id="name"
+            type="text"
+            class="validate"
+            placeholder="John Doe"
+          />
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field">
+          <input
+            id="role"
+            type="text"
+            class="validate"
+            placeholder="Medical Shop Employee"
+          />
+          <label for="role">Role</label>
+        </div>
+        <div class="input-field">
+          <input
+            id="location"
+            type="text"
+            class="validate"
+            placeholder="City, Country"
+          />
+          <label for="location">Location</label>
+        </div>
+        <div class="input-field">
+          <input
+            id="email"
+            type="email"
+            class="validate"
+            placeholder="john.doe@example.com"
+          />
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input
+            id="phone"
+            type="tel"
+            class="validate"
+            placeholder="+1 234 567 890"
+          />
+          <label for="phone">Phone</label>
+        </div>
+        <button
+          class="btn waves-effect waves-light black white-text"
+          type="submit"
+          name="action"
+        >
+          Update
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      M.AutoInit();
+
+      function validateForm() {
+        // Basic validation, you may want to enhance this
+        const name = document.getElementById("name").value;
+        const role = document.getElementById("role").value;
+        const location = document.getElementById("location").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+
+        if (!name || !role || !location || !email || !phone) {
+          M.toast({ html: "All fields are required", classes: "red" });
+          return;
+        }
+
+        // Here you can add additional validation logic if needed
+
+        // If validation passes, you can submit the form or perform other actions
+        M.toast({ html: "Profile updated successfully", classes: "green" });
+      }
+    </script>
+  </body>
+</html>

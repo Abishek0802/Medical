@@ -25,9 +25,7 @@
           text-align: center;
           height: 300px;
         }
-       
 
-     
       .container{
         position: relative;
         top: 200px;
@@ -52,6 +50,7 @@
         position: relative;
         top: 80px;
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        height: 250px;
       }
       .content3 {
         text-align: center;
@@ -64,7 +63,7 @@
       body {
         height: 2100px;
 
-        background-color: rgb(94, 96, 97);
+        background-image: linear-gradient(45deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(112.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(67.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(90deg, rgb(24, 15, 143),rgb(170, 57, 157)); background-blend-mode:overlay,overlay,overlay,normal;
         
       } 
       nav.transparent {
@@ -102,7 +101,7 @@
     <nav class="transparent">
       <div class="nav-wrapper">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-          ><i class="material-icons">people</i></a
+          ><i class="material-icons white-text">people</i></a
         >
         <div class="switch right">
           <label>
@@ -121,7 +120,7 @@
     <div class="content1">
       <img class="z-depth-5" style="margin-left: 44px;width: 300px; height: 300px ;border-radius: 50%; box-shadow: 10px;border: solid black; border-width: 4px;" src="newone.png" alt="" />
       <h3>Dr.Murugadas</h3>
-      <h6 class="black-text">About us</h6>
+      <h6>About us</h6>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit culpa
         explicabo consequatur, nihil expedita, ipsa blanditiis repellendus,
@@ -146,7 +145,7 @@
       </p>
     </div>
     <div class="content3">
-      <h3 class="black-text">Success Story</h3>
+      <h3 >Success Story</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
         dolorum repellendus sunt eos, itaque doloremque dolores magnam corporis
@@ -172,7 +171,7 @@
                   <label for="feedback">Feedback</label>
               </div>
           </div>
-          <button class="btn waves-effect waves-light grey " type="submit" name="action">Submit
+          <button class="btn waves-effect waves-light white black-text " type="submit" name="action">Submit
               <i class="material-icons right">send</i>
           </button>
       </form>
@@ -180,26 +179,27 @@
   <div class="footer">
     <footer class="page-footer ">
       <div class="container ">
-          <div class="row z-depth-5">
+          <div class="row">
               <!-- Contact Us -->
               <div class="col s12 m6 l6">
-                  <h5 class="black-text">Contact Us</h5>
+                  <h5 >Contact Us</h5>
                   <p>Email: info@example.com</p>
                   <p>Phone: +123 456 789</p>
                   <!-- Instagram Logo with Link -->
                  <a href="https://www.instagram.com/" target="_blank">
-                    <i class="fa fa-instagram" style="font-size:36px ;color: black;"></i>
+                    <i class="fa fa-instagram" style="font-size:36px ;"></i>
                   </a>
                   
                   <!-- X Logo with Link -->
                   <a href="https://www.example.com/" target="_blank">
-                    <h3 style="color: black;margin-left: 5px;">X</h3>
+                    <h3 style="margin-left: 5px;">X</h3>
                   </a>
                   
               </div>
               <!-- Working Days -->
               <div class="col s12 m6 l6">
-                  <h5 class="black-text">Working Days</h5>
+                  <h5>Working Days</h5>
+                  <p><strong>Weekdays :</strong>  9:00 AM - 10:30 PM</p>
                   <p><strong>Sunday:</strong> Morning 9:00 AM - 1:30 PM, Evening 5:30 PM - 9:00 PM</p>
                   <!-- Add other days as needed -->
                   <!-- Monday, Tuesday, etc. -->
@@ -218,9 +218,8 @@
   <ul class="collapsible">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>EMPLOYEE</div>
-      <div  class="collapsible-body"><span><a href="demo.html">Employee 1</a></span></div>
-      <div class="collapsible-body"><span><a href="#">Employee 2</a></span></div>
-      <div class="collapsible-body center"><span><a href="#">UPDATE</a></span></div>
+      <div  class="collapsible-body"><span><a href="employeeProfile.html"> 2 Employee</a></span></div>
+      <div class="collapsible-body center"><span><a href="Update.html">UPDATE</a></span></div>
 
     </li>
     <li>
