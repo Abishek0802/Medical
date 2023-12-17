@@ -1,254 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <style>
-      /* Custom styles for the transparent navbar */
-      footer.page-footer {
-            background-color: transparent !important;/* Set the background color for the footer */
-            position: relative;
-        top: 100px;
-       
-        }
-        .feedback{
-          border-radius: 10px;
-          text-align: center;
-          height: 400px;
-        }
 
-      .container{
-        position: relative;
-        top: 200px;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        
-      }
-      .sidenav {
-        /* background-color: rgb(160, 160, 160); */
-        background-image: linear-gradient(157.5deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%,rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%,rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%,rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%,rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%,rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%,rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%,rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%),linear-gradient(135deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%,rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%,rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%,rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%,rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%,rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%,rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%,rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%),linear-gradient(112.5deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%,rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%,rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%,rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%,rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%,rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%,rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%,rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%),linear-gradient(90deg, rgb(236, 151, 145),rgb(201, 243, 43)); background-blend-mode:overlay,overlay,overlay,normal;
-        
-      }
-      .content1 {
-        text-align: center;
-        color: aliceblue;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-      }
-      .content2 {
-        text-align: center;
-        background-color: black;
-        color: aliceblue;
-        border-radius: 20px;
-        position: relative;
-        top: 80px;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        height: 250px;
-      }
-      .content3 {
-        text-align: center;
-        color: aliceblue;
-        position: relative;
-        top: 150px;
-        font-weight: 100;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-      }
-      body {
-        height: 2100px;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        background-image: linear-gradient(45deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(112.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(67.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(90deg, rgb(24, 15, 143),rgb(170, 57, 157)); background-blend-mode:overlay,overlay,overlay,normal;
-        
-      } 
-      nav.transparent {
-        background-color: transparent !important;
-        box-shadow: none;
-      }
+  <style>
+    /* Custom styles for the transparent navbar */
+    footer.page-footer {
+      background-color: transparent !important;
+      /* Set the background color for the footer */
+      position: relative;
+      top: 100px;
 
-      nav.transparent a {
-        color: rgb(
-          12,
+    }
+
+    .feedback {
+      border-radius: 10px;
+      text-align: center;
+      height: 400px;
+    }
+
+    .container {
+      position: relative;
+      top: 200px;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+    }
+
+    .sidenav {
+      /* background-color: rgb(160, 160, 160); */
+      background-image: linear-gradient(157.5deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%, rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%, rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%, rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%, rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%, rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%, rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%, rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%), linear-gradient(135deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%, rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%, rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%, rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%, rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%, rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%, rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%, rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%), linear-gradient(112.5deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%, rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%, rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%, rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%, rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%, rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%, rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%, rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%), linear-gradient(90deg, rgb(236, 151, 145), rgb(201, 243, 43));
+      background-blend-mode: overlay, overlay, overlay, normal;
+
+    }
+
+    .content1 {
+      text-align: center;
+      color: aliceblue;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+
+    .content2 {
+      text-align: center;
+      background-color: black;
+      color: aliceblue;
+      border-radius: 20px;
+      position: relative;
+      top: 80px;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      height: 250px;
+    }
+
+    .content3 {
+      text-align: center;
+      color: aliceblue;
+      position: relative;
+      top: 150px;
+      font-weight: 100;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+
+    body {
+      height: 2100px;
+
+      background-image: linear-gradient(45deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%, rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%, rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%, rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%, rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%, rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%, rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%, rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%), linear-gradient(112.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%, rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%, rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%, rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%, rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%, rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%, rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%, rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%), linear-gradient(67.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%, rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%, rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%, rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%, rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%, rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%, rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%, rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%), linear-gradient(90deg, rgb(24, 15, 143), rgb(170, 57, 157));
+      background-blend-mode: overlay, overlay, overlay, normal;
+
+    }
+
+    nav.transparent {
+      background-color: transparent !important;
+      box-shadow: none;
+    }
+
+    nav.transparent a {
+      color: rgb(12,
           6,
-          6
-        ) !important; /* Change the text color to white or your preferred color */
+          6) !important;
+      /* Change the text color to white or your preferred color */
+    }
+
+    /* Custom styles for the sidenav */
+    #sidenav-overlay {
+      display: none;
+    }
+
+    @media only screen and (max-width: 992px) {
+
+      /* Hide the sidenav by default on larger screens */
+      .side-nav {
+        transform: translateX(-100%);
       }
 
-      /* Custom styles for the sidenav */
       #sidenav-overlay {
-        display: none;
+        display: block;
       }
+    }
+  </style>
+</head>
 
-      @media only screen and (max-width: 992px) {
-        /* Hide the sidenav by default on larger screens */
-        .side-nav {
-          transform: translateX(-100%);
-        }
-
-        #sidenav-overlay {
-          display: block;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="transparent">
-      <div class="nav-wrapper">
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-          ><i class="material-icons white-text">people</i></a
-        >
-        <div class="switch right">
-          <label>
-            <input type="checkbox">
-            <span class="lever black"></span>
-          </label>
-        </div>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+<body>
+  <!-- Navbar -->
+  <nav class="transparent">
+    <div class="nav-wrapper">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons white-text">people</i></a>
+      <div class="switch right">
+        <label>
+          <input type="checkbox">
+          <span class="lever black"></span>
+        </label>
       </div>
-    </nav>
-    <div class="content1">
-      <img class="z-depth-5" style="margin-left: 44px;width: 300px; height: 300px ;border-radius: 50%; box-shadow: 10px;border: solid black; border-width: 4px;" src="newone.png" alt="" />
-      <h3>Dr.Murugadas</h3>
-      <h6>About us</h6>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit culpa
-        explicabo consequatur, nihil expedita, ipsa blanditiis repellendus,
-        eligendi incidunt dicta ex non doloremque perspiciatis assumenda soluta?
-        Tenetur doloribus consequatur asperiores. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Voluptatibus saepe enim provident
-        perferendis fugit nam rerum quam suscipit velit culpa! Sunt ut quia a
-        sapiente blanditiis quo aliquam expedita nisi.
-      </p>
-      <a href="">+(91)9944540222</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
-    <div class="content2" >
-      <h3>Our journey</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        perspiciatis delectus iste explicabo voluptatem, doloremque est, autem
-        culpa molestiae rerum consequuntur fuga vitae tempora doloribus omnis
-        dicta temporibus eveniet ex! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Similique molestias rerum laborum aut, modi cupiditate
-        officia animi id vitae neque iure autem? Itaque at voluptas id unde eum
-        facilis beatae.
-      </p>
-    </div>
-    <div class="content3">
-      <h3 >Success Story</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
-        dolorum repellendus sunt eos, itaque doloremque dolores magnam corporis
-        numquam at illo delectus. Rem cum recusandae quaerat magni est
-        praesentium ab? Lorem ipsum dolor sit, amet consectetur adipisicing
-        elit. Aut voluptatum qui, totam rem nulla quidem id omnis officia
-        aliquid veniam eius, velit doloribus unde. Ad blanditiis cum inventore
-        ratione officiis.
-      </p>
-    </div>
-    <div class="container feedback black white-text" >
-      <h4>Feedback Form</h4>
-      <form id="feedbackForm">
-          <div class="row">
-              <div class="input-field col s12">
-                  <input id="name" type="text" class="validate white-text" required>
-                  <label for="name">Name</label>
-              </div>
-          </div>
-          <div class="row">
-              <div class="input-field col s12">
-                  <textarea id="feedback" class="materialize-textarea white-text" required></textarea>
-                  <label for="feedback">Feedback</label>
-              </div>
-          </div>
-          <button class="btn waves-effect waves-light white black-text " type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
-          </button>
-      </form>
+  </nav>
+  <div class="content1">
+    <img class="z-depth-5"
+      style="margin-left: 44px;width: 300px; height: 300px ;border-radius: 50%; box-shadow: 10px;border: solid black; border-width: 4px;"
+      src="newone.png" alt="" />
+    <h3>Dr.Murugadas</h3>
+    <h6>About us</h6>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit culpa
+      explicabo consequatur, nihil expedita, ipsa blanditiis repellendus,
+      eligendi incidunt dicta ex non doloremque perspiciatis assumenda soluta?
+      Tenetur doloribus consequatur asperiores. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Voluptatibus saepe enim provident
+      perferendis fugit nam rerum quam suscipit velit culpa! Sunt ut quia a
+      sapiente blanditiis quo aliquam expedita nisi.
+    </p>
+    <a href="">+(91)9944540222</a>
+  </div>
+  <div class="content2">
+    <h3>Our journey</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+      perspiciatis delectus iste explicabo voluptatem, doloremque est, autem
+      culpa molestiae rerum consequuntur fuga vitae tempora doloribus omnis
+      dicta temporibus eveniet ex! Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Similique molestias rerum laborum aut, modi cupiditate
+      officia animi id vitae neque iure autem? Itaque at voluptas id unde eum
+      facilis beatae.
+    </p>
+  </div>
+  <div class="content3">
+    <h3>Success Story</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+      dolorum repellendus sunt eos, itaque doloremque dolores magnam corporis
+      numquam at illo delectus. Rem cum recusandae quaerat magni est
+      praesentium ab? Lorem ipsum dolor sit, amet consectetur adipisicing
+      elit. Aut voluptatum qui, totam rem nulla quidem id omnis officia
+      aliquid veniam eius, velit doloribus unde. Ad blanditiis cum inventore
+      ratione officiis.
+    </p>
+  </div>
+  <div class="container feedback black white-text">
+    <h4>Feedback Form</h4>
+    <form id="feedbackForm">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate white-text" required>
+          <label for="name">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="feedback" class="materialize-textarea white-text" required></textarea>
+          <label for="feedback">Feedback</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light white black-text " type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
   </div>
   <div class="footer">
     <footer class="page-footer ">
       <div class="container ">
-          <div class="row">
-              <!-- Contact Us -->
-              <div class="col s12 m6 l6">
-                  <h5 >Contact Us</h5>
-                  <p>Email: info@example.com</p>
-                  <p>Phone: +123 456 789</p>
-                  <!-- Instagram Logo with Link -->
-                 <a href="https://www.instagram.com/" target="_blank">
-                    <i class="fa fa-instagram" style="font-size:36px ;"></i>
-                  </a>
-                  
-                  <!-- X Logo with Link -->
-                  <a href="https://www.example.com/" target="_blank">
-                    <h3 style="margin-left: 5px;">X</h3>
-                  </a>
-                  
-              </div>
-              <!-- Working Days -->
-              <div class="col s12 m6 l6">
-                  <h5>Working Days</h5>
-                  <p><strong>Weekdays :</strong>  9:00 AM - 10:30 PM</p>
-                  <p><strong>Sunday:</strong> Morning 9:00 AM - 1:30 PM, Evening 5:30 PM - 9:00 PM</p>
-                  <!-- Add other days as needed -->
-                  <!-- Monday, Tuesday, etc. -->
-              </div>
+        <div class="row">
+          <!-- Contact Us -->
+          <div class="col s12 m6 l6">
+            <h5>Contact Us</h5>
+            <p>Email: info@example.com</p>
+            <p>Phone: +123 456 789</p>
+            <!-- Instagram Logo with Link -->
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa fa-instagram" style="font-size:36px ;"></i>
+            </a>
+
+            <!-- X Logo with Link -->
+            <a href="https://www.example.com/" target="_blank">
+              <h3 style="margin-left: 5px;">X</h3>
+            </a>
+
           </div>
+          <!-- Working Days -->
+          <div class="col s12 m6 l6">
+            <h5>Working Days</h5>
+            <p><strong>Weekdays :</strong> 9:00 AM - 10:30 PM</p>
+            <p><strong>Sunday:</strong> Morning 9:00 AM - 1:30 PM, Evening 5:30 PM - 9:00 PM</p>
+            <!-- Add other days as needed -->
+            <!-- Monday, Tuesday, etc. -->
+          </div>
+        </div>
       </div>
-  </footer>
+    </footer>
   </div>
-        
-    </div>
 
-    <!-- Side Navigation -->
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="#"><h4>Ashok Medicals</h4></a></li>
-      
-  <ul class="collapsible">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>EMPLOYEE</div>
-      <div  class="collapsible-body"><span><a href="employeeProfile.html"> 2 Employee</a></span></div>
-      <div class="collapsible-body center"><span><a href="Update.html">ADD EMPLOYEE</a></span></div>
+  </div>
 
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">call</i>TO ORDER</div>
-      <div  class="collapsible-body"><span>Employee 1</span> <span class="right">number</span></div>
-      <div class="collapsible-body"><span>Employee 2</span><span class="right">number</span></div>
-    </li>
-    <li>
-      <div style="text-decoration: none;" class="collapsible-header"><i class="material-icons">place</i><a href="#">LOCAION</a></div>
-     
-    </li>
-  </ul>
+  <!-- Side Navigation -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#">
+        <h4>Ashok Medicals</h4>
+      </a></li>
+
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>EMPLOYEE</div>
+        <div class="collapsible-body"><span><a href="employeeProfile.html"> 2 Employee</a></span></div>
+        <div class="collapsible-body center"><span><a href="Update.html">ADD EMPLOYEE</a></span></div>
+
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">call</i>TO ORDER</div>
+        <div class="collapsible-body"><span>Employee 1</span> <span class="right">number</span></div>
+        <div class="collapsible-body"><span>Employee 2</span><span class="right">number</span></div>
+      </li>
+      <li>
+        <div style="text-decoration: none;" class="collapsible-header"><i class="material-icons">place</i><a
+            href="#">LOCAION</a></div>
+
+      </li>
     </ul>
-    
-     
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </ul>
 
-    <script>
-      // Initialize Materialize components
-      $(document).ready(function () {
-        $(".sidenav").sidenav();
-      });
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          M.AutoInit(); // Initialize Materialize components
-      });
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    // Initialize Materialize components
+    $(document).ready(function () {
+      $(".sidenav").sidenav();
+    });
   </script>
-  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit(); // Initialize Materialize components
+    });
+  </script>
+</body>
+
 </html>
