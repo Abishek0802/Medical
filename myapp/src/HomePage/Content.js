@@ -3,7 +3,7 @@ import { Card } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import img1 from "./am.jpeg";
+import img1 from "./shop.png";
 import Content2 from "./Content2.js";
 import Content3 from "./Content3.js";
 
@@ -33,7 +33,7 @@ const ResponsiveCard = () => {
               style={{
                 width: "100%",
                 height: "auto",
-                borderRadius: "50%",
+                borderRadius: "10%",
               }}
             />
           </Grid>
@@ -53,14 +53,16 @@ const ResponsiveCard = () => {
               Dr.Murugadas
             </Typography>
             <Typography sx={{ textAlign: "center" }} variant="body1" paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              hendrerit justo eget lacus iaculis aliquet. Nullam nec turpis non
-              velit bibendum tristique. Vestibulum ante ipsum primis in faucibus
-              orci luctus et ultrices posuere cubilia Curae; Integer varius
-              lectus eu arcu vestibulum, at malesuada quam feugiat. Proin
-              euismod, velit vel fermentum sagittis, dui libero laoreet purus,
-              ut fermentum ex justo vel purus. Vestibulum eu elit at mi dictum
-              sagittis.
+              Chemists play a key role in our lives at the time of illness. By
+              offering almost all kinds of medicines, they have become the
+              lifeline for many. Apart from medicines, they also sell products
+              for skin and health care. Chemists also called pharmacists, are
+              found in every corner of the city. Some of them often have tie-ups
+              with big doctors and hospitals.f you need medicine for your first
+              aid kit or want to buy medicine prescribed by your doctor, you
+              should get in contact with Ashok Medicals in Mandhakarai,
+              Villupuram. They are well-known in Villupuram for a variety of
+              services, such as Home Delivery.
             </Typography>
           </Box>
         </CardContent>

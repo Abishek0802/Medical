@@ -8,8 +8,6 @@ const Footer = () => {
     textAlign: "center",
   };
 
- 
-
   const workingDaysStyle = {
     marginBottom: "10px",
   };
@@ -21,15 +19,26 @@ const Footer = () => {
   return (
     <div style={containerStyle}>
       <div style={workingDaysStyle}>
-        <p>Working Days: Monday to Sunday</p>
+        <p>Working Days: Mon- Sun : 9 PM -11 PM</p>
       </div>
       <div style={workingHoursStyle}>
-        <p>Sunday: 9.00 AM to 9.00 PM</p>
+        <p>Sunday: 9.00 AM - 9.00 PM</p>
       </div>
-      <div >
+      <div>
         <p>
-          Contact Us: <a style={{textDecoration:"none", color:"red"}} href="https://www.facebook.com">Facebook</a>{" "}
-          <a  style={{textDecoration:"none", color:"red"}} href="https://www.instagram.com">Instagram</a>
+          Follow us:{" "}
+          <a
+            style={{ textDecoration: "none", color: "red" }}
+            href="https://www.facebook.com"
+          >
+            [ Facebook]
+          </a>{" "}
+          <a
+            style={{ textDecoration: "none", color: "red" }}
+            href="https://www.instagram.com"
+          >
+            [Instagram]
+          </a>
         </p>
       </div>
     </div>
