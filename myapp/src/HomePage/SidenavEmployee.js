@@ -33,20 +33,20 @@ export default function MenuPopupState() {
             <Menu {...bindMenu(popupState)}>
               <MenuItem sx={{ width: "270px" }}>
                 <PersonPinIcon />{" "}
-                <Link to="/OwnerProfile">
+                <Link style={{textDecoration:"none"}} to="/OwnerProfile">
                   <Typography className="typo">Owner Profile</Typography>
                 </Link>
               </MenuItem>
               <MenuItem>
                 {" "}
                 <PersonPinIcon />
-                <Link to="/EmployeeProfile" className="typo">
+                <Link style={{textDecoration:"none"}} to="/EmployeeProfile" className="typo">
                   Employee Profile
                 </Link>{" "}
               </MenuItem>
               <MenuItem>
                 <PlaceIcon />
-                <Link className="typo">Location</Link>
+                <Link style={{textDecoration:"none"}} className="typo">Location</Link>
               </MenuItem>
             </Menu>
           </React.Fragment>

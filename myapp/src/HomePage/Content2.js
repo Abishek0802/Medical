@@ -2,6 +2,9 @@ import React from "react";
 import { Card } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Typography } from "@mui/material";
+import CardMedia from "@mui/material/CardMedia";
+import Box from '@mui/material/Box';
+import img5 from "./tablet.jpg"
 
 const ResponsiveCard = () => {
   const cardStyle = {
@@ -19,9 +22,18 @@ const ResponsiveCard = () => {
       style={cardStyle}
     >
       <CardContent>
-        <Typography sx={{ textAlign: "center" }} variant="h3" component="div">
-          Our Journey
+        <Typography sx={{ textAlign: "center" }} variant="h4" component="div">
+          English Medicine
         </Typography>
+        <Box>
+        <CardMedia
+          style={{borderRadius:"30px"}}
+          component="img"
+          alt="Employee Image"
+          height="240"
+          image={img5}
+        />
+        </Box>
         <Typography sx={{ textAlign: "center" }} variant="body1" paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
           hendrerit justo eget lacus iaculis aliquet. Nullam nec turpis non

@@ -60,10 +60,14 @@ class NavBar extends Component {
     const drawerItems = (
       <Box style={containerStyle}>
         <List>
-          <Typography to="/Next" variant="h6" sx={{ textAlign: "center", color: "black" }}>
-            Ashok  Medicals
-            </Typography>
-          
+          <Typography
+            to="/Next"
+            variant="h6"
+            sx={{ textAlign: "center", color: "black" }}
+          >
+            Ashok Medicals
+          </Typography>
+
           {/* this is SidenavEmployee */}
           <div>
             <SidenavEmployee />
@@ -117,7 +121,13 @@ class NavBar extends Component {
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <div>
                     <Typography
-                      sx={{ marginLeft: "20px", color: "black" }}
+                      sx={{
+                        marginLeft: "20px",
+                        color: "black",
+                        color: "black",
+                        fontSize: "30px",
+                        fontWeight: "bold",
+                      }}
                       variant="h5"
                     >
                       Ashok Medicals

@@ -3,7 +3,7 @@ import { Card } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import img1 from "./shop.png";
+import img1 from "./logo2.jpg";
 import Content2 from "./Content2.js";
 import Content3 from "./Content3.js";
 
@@ -32,8 +32,8 @@ const ResponsiveCard = () => {
               alt="About Us"
               style={{
                 width: "100%",
-                height: "auto",
-                borderRadius: "10%",
+                height: "200px",
+                borderRadius: "5%",
               }}
             />
           </Grid>
