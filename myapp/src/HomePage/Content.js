@@ -22,7 +22,11 @@ const ResponsiveCard = () => {
     <>
       <Card
         className="Card"
-        sx={{ backgroundColor: "aliceblue", borderBottomRightRadius: "40px" }}
+        sx={{
+          backgroundColor: "aliceblue",
+          borderBottomRightRadius: "40px",
+          height: "750px",
+        }}
         style={cardStyle}
       >
         <CardContent>
@@ -52,7 +56,11 @@ const ResponsiveCard = () => {
             >
               Dr.Murugadas
             </Typography>
-            <Typography sx={{ textAlign: "center" }} variant="body1" paragraph>
+            <Typography
+              sx={{ textAlign: "center", position: "relative", top: "50px" }}
+              variant="body1"
+              paragraph
+            >
               Chemists play a key role in our lives at the time of illness. By
               offering almost all kinds of medicines, they have become the
               lifeline for many. Apart from medicines, they also sell products

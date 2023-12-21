@@ -1,11 +1,19 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, Button, Avatar, Typography } from '@mui/material';
-import ownerimg from "./owner1.1.jpg"
-import {Link} from "react-router-dom";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  Button,
+  Avatar,
+  Typography,
+  Box,
+} from "@mui/material";
+import ownerimg from "./owner1.1.jpg";
+import { Link } from "react-router-dom";
+import "./OwnerProfile.css";
 
 const MedicalShopOwnerProfileCard = () => {
-
-  const owner={
+  const owner = {
     backgroundImage: `
     radial-gradient(circle at 13% 47%, rgba(140, 140, 140,0.03) 0%, rgba(140, 140, 140,0.03) 25%,transparent 25%, transparent 100%),
     radial-gradient(circle at 28% 63%, rgba(143, 143, 143,0.03) 0%, rgba(143, 143, 143,0.03) 16%,transparent 16%, transparent 100%),
@@ -16,18 +24,29 @@ const MedicalShopOwnerProfileCard = () => {
     radial-gradient(circle at 55% 52%, rgba(69, 69, 69,0.03) 0%, rgba(69, 69, 69,0.03) 6%,transparent 6%, transparent 100%),
     linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255))
   `,
-  borderRadius:"20px",
-  backgroundSize: '100% 100%',
-  }
+    borderRadius: "20px",
+    backgroundSize: "100% 100%",
+  };
   return (
-    <Card style={owner} sx={{position:"relative",top:"20px",maxWidth:345,left:"20px",height:"400px"}}>
+    <Card
+      style={owner}
+      sx={{
+        position: "relative",
+        top: "20px",
+        maxWidth: 345,
+        left: "20px",
+        height: "400px",
+      }}
+    >
       <CardHeader
         avatar={
-          <Avatar
-            alt="Medical Shop Owner"
-            src={ownerimg}
-            style={{ borderRadius: '50%', width: '150px', height: '150px' }}
-          />
+          <Box className="avatar">
+            <Avatar
+              alt="Medical Shop Owner"
+              src={ownerimg}
+              style={{ borderRadius: "50%", width: "150px", height: "150px" }}
+            />
+          </Box>
         }
         title="MURUGADAS"
         subheader="Experience: 40 years"
@@ -41,8 +60,10 @@ const MedicalShopOwnerProfileCard = () => {
         </div>
       </CardContent>
       <CardContent>
-        <Button variant="contained" >
-         <Link style={{textDecoration:"none"}} to="/UpdateOwner"><Typography style={{color:"white"}}>Update Profile</Typography></Link>  
+        <Button variant="contained">
+          <Link style={{ textDecoration: "none" }} to="/UpdateOwner">
+            <Typography style={{ color: "white" }}>Update Profile</Typography>
+          </Link>
         </Button>
       </CardContent>
     </Card>
