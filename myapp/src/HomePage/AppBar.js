@@ -20,6 +20,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 // for switch
 import Switch from "@mui/material/Switch";
+
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
 class NavBar extends Component {
@@ -59,9 +60,10 @@ class NavBar extends Component {
     const drawerItems = (
       <Box style={containerStyle}>
         <List>
-          <Typography variant="h6" sx={{ textAlign: "center", color: "black" }}>
-            Ashok Medicals
-          </Typography>
+          <Typography to="/Next" variant="h6" sx={{ textAlign: "center", color: "black" }}>
+            Ashok  Med
+            </Typography>
+          
           {/* this is SidenavEmployee */}
           <div>
             <SidenavEmployee />
