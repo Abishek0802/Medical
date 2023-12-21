@@ -8,8 +8,10 @@ import PersonPinIcon from "@mui/icons-material/PersonPin";
 import CallIcon from "@mui/icons-material/Call";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
+import "./SidenavEmployee.css";
+import { Typography } from "@mui/material";
+import { useState } from "react";
 
 export default function MenuPopupState() {
   return (
@@ -18,53 +20,33 @@ export default function MenuPopupState() {
         {(popupState) => (
           <React.Fragment>
             <Button
-              sx={{
-                color: "black",
+              style={{
                 backgroundColor: "white",
+                color: "black",
                 width: "100%",
+                marginTop: "10px",
               }}
-              variant="contained"
               {...bindTrigger(popupState)}
             >
-              <DashboardIcon sx={{ marginRight: "40px" }} /> Dashboard
+              <DashboardIcon sx={{ marginRight: "40px" }} /> DASHBOARD
             </Button>
             <Menu {...bindMenu(popupState)}>
               <MenuItem sx={{ width: "270px" }}>
                 <PersonPinIcon />{" "}
-                <Link
-                  sx={{
-                    paddingLeft: "20px",
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
-                  Owner Profile
+                <Link to="/OwnerProfile">
+                  <Typography className="typo">Owner Profile</Typography>
                 </Link>
               </MenuItem>
               <MenuItem>
                 {" "}
                 <PersonPinIcon />
-                <Link
-                  sx={{
-                    paddingLeft: "20px",
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
+                <Link to="/EmployeeProfile" className="typo">
                   Employee Profile
                 </Link>{" "}
               </MenuItem>
               <MenuItem>
                 <PlaceIcon />
-                <Link
-                  sx={{
-                    paddingLeft: "20px",
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
-                  Location
-                </Link>
+                <Link className="typo">Location</Link>
               </MenuItem>
             </Menu>
           </React.Fragment>
@@ -74,13 +56,12 @@ export default function MenuPopupState() {
         {(popupState) => (
           <React.Fragment>
             <Button
-              sx={{
-                color: "black",
+              style={{
                 backgroundColor: "white",
+                color: "green",
                 width: "100%",
                 marginTop: "10px",
               }}
-              variant="contained"
               {...bindTrigger(popupState)}
             >
               <CheckCircleIcon sx={{ marginRight: "20px" }} /> Home Delivery
@@ -88,15 +69,9 @@ export default function MenuPopupState() {
             <Menu {...bindMenu(popupState)}>
               <MenuItem sx={{ width: "270px" }}>
                 <CallIcon />{" "}
-                <Link
-                  sx={{
-                    paddingLeft: "20px",
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
-                  Call<Link sx={{ paddingLeft: "10px" }}>+919944540222</Link>
-                </Link>
+                <Button>
+                  <Link className="typo">+919944540222</Link>
+                </Button>
               </MenuItem>
             </Menu>
           </React.Fragment>

@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import React from "react";
 import AppBar from "./HomePage/AppBar"
-import Next from "./demo/Next";
+import OwnerProfile from "./Profiles/OwnerProfile";
+import EmployeeProfile from "./Profiles/EmployeeProfile";
 const HomePage =[<AppBar/>]
 
 export default function App() {
@@ -14,7 +15,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={HomePage} />
-        <Route path="/Next/*" element={<Next />} />
+        <Route path="/OwnerProfile/*" element={<OwnerProfile />} />
+        <Route path="/EmployeeProfile/*" element={<EmployeeProfile />} />
      
       </Routes>
     </BrowserRouter>

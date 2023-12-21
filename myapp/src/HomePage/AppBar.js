@@ -61,7 +61,7 @@ class NavBar extends Component {
       <Box style={containerStyle}>
         <List>
           <Typography to="/Next" variant="h6" sx={{ textAlign: "center", color: "black" }}>
-            Ashok  Med
+            Ashok  Medicals
             </Typography>
           
           {/* this is SidenavEmployee */}
