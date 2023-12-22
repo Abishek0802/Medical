@@ -4,9 +4,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import img1 from "./employee.jpeg";
-import img2 from "./employee2.jpg";
-import img3 from "./employee3.jpeg";
+import img1 from "../Images/employee.jpeg";
+import img2 from "../Images/employee2.jpg";
+import img3 from "../Images/employee3.jpeg";
 import { Link } from "react-router-dom";
 
 const EmployeeCard = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, Button, Avatar, Typography } from '@mui/material';
-import ownerimg from "./owner1.1.jpg"
+import ownerimg from "../Images/owner1.1.jpg"
 import {Link} from "react-router-dom";
 
 const MedicalShopOwnerProfileCard = () => {
