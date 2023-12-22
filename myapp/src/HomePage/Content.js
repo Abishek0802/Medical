@@ -50,14 +50,27 @@ const ResponsiveCard = () => {
               About Us
             </Typography>
             <Typography
+              style={{ display: "flex" }}
               sx={{ textAlign: "center" }}
               variant="h3"
               component="div"
+              position="relative"
+              top="20px"
+              left="10px"
             >
-              Dr.Murugadas
+              M.Murugadas
+              <Typography
+                style={{
+                  position: "relative",
+                  top: "40px",
+                  fontSize: "small",
+                }}
+              >
+                -Owner
+              </Typography>
             </Typography>
             <Typography
-              sx={{ textAlign: "center", position: "relative", top: "50px" }}
+              sx={{ textAlign: "center", position: "relative", top: "70px" }}
               variant="body1"
               paragraph
             >

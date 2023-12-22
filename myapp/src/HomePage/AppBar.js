@@ -121,16 +121,25 @@ class NavBar extends Component {
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <div>
                     <Typography
-                      className="head"
+                      style={{ display: "flex" }}
                       sx={{
                         color: "black",
-                        marginLeft: "20px",
-                        fontSize: "30px",
+                        marginLeft: "10px",
+                        fontSize: "23px",
                         fontWeight: "bold",
                       }}
                       variant="h5"
                     >
-                      Ashok Medicals
+                      Ashok Medicals{" "}
+                      <Typography
+                        style={{
+                          position: "relative",
+                          top: "20px",
+                          fontSize: "small",
+                        }}
+                      >
+                        (villupuram)
+                      </Typography>
                     </Typography>
                   </div>
                   <div style={{ flexGrow: 1 }} />
