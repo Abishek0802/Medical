@@ -7,7 +7,7 @@ const MedicalShopOwnerProfileCard = () => {
   const [number, setNumber] = useState('+1234567890');
   const [address, setAddress] = useState('123 Medical Street, City');
   const [experience, setExperience] = useState('X years');
-  const [image, setImage] = useState('path/to/your/image.jpg');
+  const [image, ] = useState('path/to/your/image.jpg');
 
   const handleUpdateProfile = () => {
     // Implement your logic to update the profile
