@@ -97,7 +97,7 @@ class NavBar extends Component {
           className="body"
           style={{
             flexGrow: 1,
-            // backgroundColor: "rgba(178, 152, 220, 0.5)",
+            height: "100px",
           }}
         >
           <AppBar
@@ -121,10 +121,10 @@ class NavBar extends Component {
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <div>
                     <Typography
+                      className="head"
                       sx={{
+                        color: "black",
                         marginLeft: "20px",
-                        color: "black",
-                        color: "black",
                         fontSize: "30px",
                         fontWeight: "bold",
                       }}

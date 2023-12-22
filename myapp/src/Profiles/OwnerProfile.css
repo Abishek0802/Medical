@@ -1,0 +1,14 @@
+.avatar {
+  animation: pulse 2s infinite;
+  border: solid rgb(23, 23, 221) 5px;
+  border-radius: 50%;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

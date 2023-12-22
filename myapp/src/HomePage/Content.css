@@ -1,3 +1,16 @@
 .grid1 img {
-  box-shadow: -8px 2px 8px rgba(0, 0, 0, 0.4); /* Adjust the values as needed */
+  box-shadow: -8px 2px 8px rgba(0, 0, 0, 0.4);
+  /* Adjust the values as needed */
+}
+.grid1 {
+  animation: pulse 2s;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
