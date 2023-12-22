@@ -1,8 +1,4 @@
 // ... (other imports)
-import React, { Component } from "react";
-import "./AppBar.css";
-import Content from "./Content.js";
-import SidenavEmployee from "./SidenavEmployee.js";
 import {
   AppBar,
   Toolbar,
@@ -15,11 +11,14 @@ import {
   Menu,
   Typography,
 } from "@mui/material";
-
+import BarLoader from "react-spinners/BarLoader";
+import React, { Component } from "react";
+import Content from "./Content.js";
+import SidenavEmployee from "./SidenavEmployee.js";
+import "./AppBar.css";
 import MenuIcon from "@mui/icons-material/Menu";
-
-// for switch
-import Switch from "@mui/material/Switch";
+// for icon
+import MedicationIcon from "@mui/icons-material/Medication";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -61,11 +60,19 @@ class NavBar extends Component {
       <Box style={containerStyle}>
         <List>
           <Typography
+            fontFamily="'Ubuntu', sans-serif"
             to="/Next"
             variant="h6"
-            sx={{ textAlign: "center", color: "black" }}
+            sx={{ textAlign: "center", color: "black", fontSize: "30px" }}
           >
             Ashok Medicals
+            <BarLoader
+              style={{ marginTop: "40%" }}
+              color="#000000"
+              height={5}
+              width={150}
+              speedMultiplier={0.3}
+            />
           </Typography>
 
           {/* this is SidenavEmployee */}
@@ -123,9 +130,12 @@ class NavBar extends Component {
                     <Typography
                       style={{ display: "flex" }}
                       sx={{
+                        fontFamily: "'Ubuntu', sans-serif",
                         color: "black",
+                        position: "relative",
+                        top: "10px",
                         marginLeft: "10px",
-                        fontSize: "23px",
+                        fontSize: "24px",
                         fontWeight: "bold",
                       }}
                       variant="h5"
@@ -133,6 +143,7 @@ class NavBar extends Component {
                       Ashok Medicals{" "}
                       <Typography
                         style={{
+                          fontFamily: "'Ubuntu', sans-serif",
                           position: "relative",
                           top: "20px",
                           fontSize: "small",
@@ -144,8 +155,14 @@ class NavBar extends Component {
                   </div>
                   <div style={{ flexGrow: 1 }} />
 
-                  <div style={{ width: "10%" }}>
-                    <Switch {...label} />
+                  <div
+                    style={{
+                      color: "green",
+                      position: "relative",
+                      left: "10px",
+                    }}
+                  >
+                    <MedicationIcon />
                   </div>
                 </div>
               </Container>

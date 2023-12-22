@@ -21,6 +21,7 @@ export default function MenuPopupState() {
           <React.Fragment>
             <Button
               style={{
+                fontFamily: "'Ubuntu', sans-serif",
                 backgroundColor: "white",
                 color: "black",
                 width: "100%",
@@ -28,12 +29,21 @@ export default function MenuPopupState() {
               }}
               {...bindTrigger(popupState)}
             >
-              <DashboardIcon sx={{ marginRight: "40px" }} /> DASHBOARD
+              <DashboardIcon
+                sx={{ marginRight: "40px", fontFamily: "'Ubuntu', sans-serif" }}
+              />{" "}
+              DASHBOARD
             </Button>
             <Menu {...bindMenu(popupState)}>
               <MenuItem sx={{ width: "270px" }}>
                 <PersonPinIcon />{" "}
-                <Link style={{ textDecoration: "none" }} to="/OwnerProfile">
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    fontFamily: "'Ubuntu', sans-serif",
+                  }}
+                  to="/OwnerProfile"
+                >
                   <Typography className="typo">Owner Profile</Typography>
                 </Link>
               </MenuItem>
@@ -41,7 +51,10 @@ export default function MenuPopupState() {
                 {" "}
                 <PersonPinIcon />
                 <Link
-                  style={{ textDecoration: "none" }}
+                  style={{
+                    textDecoration: "none",
+                    fontFamily: "'Ubuntu', sans-serif",
+                  }}
                   to="/EmployeeProfile"
                   className="typo"
                 >
@@ -50,7 +63,13 @@ export default function MenuPopupState() {
               </MenuItem>
               <MenuItem>
                 <PlaceIcon />
-                <Link style={{ textDecoration: "none" }} className="typo">
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    fontFamily: "'Ubuntu', sans-serif",
+                  }}
+                  className="typo"
+                >
                   Location
                 </Link>
               </MenuItem>
@@ -67,6 +86,7 @@ export default function MenuPopupState() {
                 color: "green",
                 width: "100%",
                 marginTop: "10px",
+                fontFamily: "'Ubuntu', sans-serif",
               }}
               {...bindTrigger(popupState)}
             >
@@ -76,7 +96,13 @@ export default function MenuPopupState() {
               <MenuItem sx={{ width: "270px" }}>
                 <CallIcon />{" "}
                 <Button>
-                  <Link style={{ textDecoration: "none" }} className="typo">
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      fontFamily: "'Ubuntu', sans-serif",
+                    }}
+                    className="typo"
+                  >
                     +919944540222
                   </Link>
                 </Button>

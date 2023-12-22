@@ -3,9 +3,8 @@ import { Card } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Typography } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
-import Box from '@mui/material/Box';
-import img4 from "./cow.jpg"
-
+import Box from "@mui/material/Box";
+import img4 from "../Images/cow3.jpg";
 
 const ResponsiveCard = () => {
   const cardStyle = {
@@ -13,12 +12,13 @@ const ResponsiveCard = () => {
     margin: "auto",
     marginTop: 20,
     backgroundImage: `
-    linear-gradient(315deg, rgb(208, 57, 227) 0%, rgb(208, 57, 227) 1%, rgb(218, 94, 219) 1%, rgb(218, 94, 219) 24%, rgb(228, 130, 212) 24%, rgb(228, 130, 212) 30%, rgb(238, 167, 204) 30%, rgb(238, 167, 204) 73%, rgb(248, 203, 196) 73%, rgb(248, 203, 196) 100%),
-    linear-gradient(225deg, rgb(208, 57, 227) 0%, rgb(208, 57, 227) 1%, rgb(218, 94, 219) 1%, rgb(218, 94, 219) 24%, rgb(228, 130, 212) 24%, rgb(228, 130, 212) 30%, rgb(238, 167, 204) 30%, rgb(238, 167, 204) 73%, rgb(248, 203, 196) 73%, rgb(248, 203, 196) 100%),
-    linear-gradient(180deg, rgb(208, 57, 227) 0%, rgb(208, 57, 227) 1%, rgb(218, 94, 219) 1%, rgb(218, 94, 219) 24%, rgb(228, 130, 212) 24%, rgb(228, 130, 212) 30%, rgb(238, 167, 204) 30%, rgb(238, 167, 204) 73%, rgb(248, 203, 196) 73%, rgb(248, 203, 196) 100%),
-    linear-gradient(270deg, rgb(51, 80, 234), rgb(213, 245, 101))
+    linear-gradient(270deg, rgb(209, 209, 209), rgb(207, 207, 207)),
+    linear-gradient(225deg, rgb(177, 223, 206) 0%, rgb(177, 223, 206) 46%, rgb(147, 192, 214) 46%, rgb(147, 192, 214) 56%, rgb(117, 162, 222) 56%, rgb(117, 162, 222) 61%, rgb(86, 131, 229) 61%, rgb(86, 131, 229) 64%, rgb(56, 101, 237) 64%, rgb(56, 101, 237) 82%, rgb(26, 70, 245) 82%, rgb(26, 70, 245) 100%),
+    linear-gradient(315deg, rgb(177, 223, 206) 0%, rgb(177, 223, 206) 46%, rgb(147, 192, 214) 46%, rgb(147, 192, 214) 56%, rgb(117, 162, 222) 56%, rgb(117, 162, 222) 61%, rgb(86, 131, 229) 61%, rgb(86, 131, 229) 64%, rgb(56, 101, 237) 64%, rgb(56, 101, 237) 82%, rgb(26, 70, 245) 82%, rgb(26, 70, 245) 100%)
   `,
-    backgroundBlendMode: "overlay, overlay, overlay, normal", // Replace with the desired numeric value
+    backgroundBlendMode: "overlay, overlay, normal",
+
+    boxShadow: "-8px 2px 8px rgba(0, 0, 0, 0.4)",
   };
 
   return (
@@ -27,20 +27,33 @@ const ResponsiveCard = () => {
       style={cardStyle}
     >
       <CardContent>
-        <Typography sx={{ textAlign: "center" }} variant="h4" component="div">
-        veterinary Medicine
+        <Typography
+          sx={{ textAlign: "center", fontFamily: "'Ubuntu', sans-serif" }}
+          variant="h4"
+          component="div"
+        >
+          veterinary Medicine
         </Typography>
         <Box>
-        <CardMedia
-          style={{borderRadius:"30px"}}
-          component="img"
-          alt="Employee Image"
-          height="240"
-          image={img4}
-        />
+          <CardMedia
+            style={{
+              borderRadius: "30px",
+              position: "relative",
+              top: "20px",
+              boxShadow: "-8px 2px 8px rgba(0, 0, 0, 0.4)",
+            }}
+            component="img"
+            alt="Employee Image"
+            height="240"
+            image={img4}
+          />
         </Box>
         <Typography
-          sx={{ textAlign: "center", paddingTop: "20px" }}
+          sx={{
+            textAlign: "center",
+            paddingTop: "20px",
+            fontFamily: "'Ubuntu', sans-serif",
+          }}
           variant="body1"
           paragraph
         >

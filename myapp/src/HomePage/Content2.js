@@ -3,38 +3,54 @@ import { Card } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Typography } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
-import Box from '@mui/material/Box';
-import img5 from "./tablet.jpg"
+import Box from "@mui/material/Box";
+import img5 from "../Images/tablet.jpg";
+import "./Content.css";
 
 const ResponsiveCard = () => {
   const cardStyle = {
     maxWidth: 400,
     margin: "auto",
     marginTop: 20,
-    backgroundImage:
-      "linear-gradient(135deg, rgb(208, 57, 227) 0%, rgb(208, 57, 227) 1%, rgb(218, 94, 219) 1%, rgb(218, 94, 219) 24%, rgb(228, 130, 212) 24%, rgb(228, 130, 212) 30%, rgb(238, 167, 204) 30%, rgb(238, 167, 204) 73%, rgb(248, 203, 196) 73%, rgb(248, 203, 196) 100%),linear-gradient(45deg, rgb(208, 57, 227) 0%, rgb(208, 57, 227) 1%, rgb(218, 94, 219) 1%, rgb(218, 94, 219) 24%, rgb(228, 130, 212) 24%, rgb(228, 130, 212) 30%, rgb(238, 167, 204) 30%, rgb(238, 167, 204) 73%, rgb(248, 203, 196) 73%, rgb(248, 203, 196) 100%),linear-gradient(0deg, rgb(208, 57, 227) 0%, rgb(208, 57, 227) 1%, rgb(218, 94, 219) 1%, rgb(218, 94, 219) 24%, rgb(228, 130, 212) 24%, rgb(228, 130, 212) 30%, rgb(238, 167, 204) 30%, rgb(238, 167, 204) 73%, rgb(248, 203, 196) 73%, rgb(248, 203, 196) 100%),linear-gradient(90deg, rgb(51, 80, 234), rgb(213, 245, 101))",
-    backgroundBlendMode: "overlay, overlay, overlay, normal", // Replace with the desired numeric value
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
   };
 
   return (
     <Card
-      sx={{ borderTopLeftRadius: "40px", borderBottomLeftRadius: "40px" }}
+      sx={{
+        borderTopLeftRadius: "40px",
+        borderBottomLeftRadius: "40px",
+      }}
       style={cardStyle}
+      className="background"
     >
       <CardContent>
-        <Typography sx={{ textAlign: "center" }} variant="h4" component="div">
+        <Typography
+          sx={{ textAlign: "center", fontFamily: "'Ubuntu', sans-serif" }}
+          variant="h4"
+          component="div"
+        >
           English Medicine
         </Typography>
         <Box>
-        <CardMedia
-          style={{borderRadius:"30px"}}
-          component="img"
-          alt="Employee Image"
-          height="240"
-          image={img5}
-        />
+          <CardMedia
+            style={{
+              borderRadius: "30px",
+              position: "relative",
+              top: "20px",
+              boxShadow: "-8px 2px 8px rgba(0, 0, 0, 0.4)",
+            }}
+            component="img"
+            alt="Employee Image"
+            height="240"
+            image={img5}
+          />
         </Box>
-        <Typography sx={{ textAlign: "center" }} variant="body1" paragraph>
+        <Typography
+          sx={{ textAlign: "center", fontFamily: "'Ubuntu', sans-serif" }}
+          variant="body1"
+          paragraph
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
           hendrerit justo eget lacus iaculis aliquet. Nullam nec turpis non
           velit bibendum tristique. Vestibulum ante ipsum primis in faucibus
