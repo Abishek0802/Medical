@@ -63,7 +63,12 @@ class NavBar extends Component {
             fontFamily="'Ubuntu', sans-serif"
             to="/Next"
             variant="h6"
-            sx={{ textAlign: "center", color: "black", fontSize: "30px" }}
+            sx={{
+              textAlign: "center",
+              color: "black",
+              fontSize: "30px",
+              fontWeight: "bold",
+            }}
           >
             Ashok Medicals
             <BarLoader
@@ -125,7 +130,12 @@ class NavBar extends Component {
                 <MenuIcon />
               </IconButton>
               <Container>
-                <div style={{ display: "flex", alignItems: "center" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
                   <div>
                     <Typography
                       style={{ display: "flex" }}

@@ -72,9 +72,9 @@ const ResponsiveCard = () => {
                 </Typography>
               </Typography>
               <Typography
-                className="typo"
+                className="typo1"
                 sx={{
-                  textAlign: "center",
+                  fontFamily: "'Ubuntu', sans-serif",
                   position: "relative",
                   top: "70px",
                 }}

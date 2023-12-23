@@ -38,13 +38,14 @@ export default function MenuPopupState() {
               <MenuItem sx={{ width: "270px" }}>
                 <PersonPinIcon />{" "}
                 <Link
+                  className="typo"
                   style={{
                     textDecoration: "none",
                     fontFamily: "'Ubuntu', sans-serif",
                   }}
                   to="/OwnerProfile"
                 >
-                  <Typography className="typo">Owner Profile</Typography>
+                  Owner Profile
                 </Link>
               </MenuItem>
               <MenuItem>
@@ -63,7 +64,8 @@ export default function MenuPopupState() {
               </MenuItem>
               <MenuItem>
                 <PlaceIcon />
-                <Link
+                <a
+                  href="https://g.co/kgs/td9z1Q"
                   style={{
                     textDecoration: "none",
                     fontFamily: "'Ubuntu', sans-serif",
@@ -71,7 +73,7 @@ export default function MenuPopupState() {
                   className="typo"
                 >
                   Location
-                </Link>
+                </a>
               </MenuItem>
             </Menu>
           </React.Fragment>
@@ -96,15 +98,16 @@ export default function MenuPopupState() {
               <MenuItem sx={{ width: "270px" }}>
                 <CallIcon />{" "}
                 <Button>
-                  <Link
+                  <a
+                    href="tel:+918248309125"
                     style={{
                       textDecoration: "none",
                       fontFamily: "'Ubuntu', sans-serif",
                     }}
                     className="typo"
                   >
-                    +919944540222
-                  </Link>
+                    +918248309125
+                  </a>
                 </Button>
               </MenuItem>
             </Menu>
