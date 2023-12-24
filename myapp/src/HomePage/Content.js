@@ -42,7 +42,7 @@ const ResponsiveCard = () => {
           </Grid>
           <Box sx={{ paddingTop: "20px" }}>
             <Typography
-              sx={{ textAlign: "center" }}
+              sx={{ textAlign: "center", fontFamily: "'Ubuntu', sans-serif" }}
               variant="h6"
               component="div"
             >

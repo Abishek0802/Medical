@@ -1,8 +1,16 @@
-import React from 'react';
-import { Card,Box, CardContent, CardHeader, Button, Avatar, Typography } from '@mui/material';
-import ownerimg from "../Images/owner1.1.jpg"
-import {Link} from "react-router-dom";
-import "./OwnerProfile.css"
+import React from "react";
+import {
+  Card,
+  Box,
+  CardContent,
+  CardHeader,
+  Button,
+  Avatar,
+  Typography,
+} from "@mui/material";
+import ownerimg from "../Images/owner1.1.jpg";
+import { Link } from "react-router-dom";
+import "./OwnerProfile.css";
 
 const MedicalShopOwnerProfileCard = () => {
   const owner = {
@@ -32,11 +40,17 @@ const MedicalShopOwnerProfileCard = () => {
     >
       <CardHeader
         avatar={
-          <Box className="avatar">
+          <Box>
             <Avatar
+              className="avatar"
               alt="Medical Shop Owner"
               src={ownerimg}
-              style={{ borderRadius: "50%", width: "150px", height: "150px" }}
+              style={{
+                borderRadius: "50%",
+                width: "150px",
+                height: "150px",
+                position: "sticky",
+              }}
             />
           </Box>
         }

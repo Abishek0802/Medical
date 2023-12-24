@@ -1,5 +1,6 @@
 .grid1 img {
   box-shadow: -8px 2px 8px rgba(6, 54, 68, 0.4);
+
   /* Adjust the values as needed */
 }
 .grid1 {
@@ -68,10 +69,9 @@
     );
   background-blend-mode: overlay, overlay, normal;
 }
-.typo {
+.typo1 {
   position: relative;
-  color: #ffffff;
+  color: #110b0b;
   font-size: 14rem;
   line-height: 0.9;
-  right: 20px;
 }
