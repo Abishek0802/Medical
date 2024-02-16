@@ -1,0 +1,19 @@
+.reg{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    flex-direction: column;
+    background-color: chocolate;
+    padding: 20px;
+    border-radius: 10px;
+}
+.inp{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-radius: 10px;
+   
+}
