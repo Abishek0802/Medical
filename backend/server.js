@@ -1,43 +1,83 @@
+// server.js
 const express = require('express');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const cors = require('cors'); // Import cors middleware
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const User = require('./Modules/userModel'); // Import User model
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
-// Connect to MongoDB
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+
+// MongoDB connection
 mongoose.connect('mongodb://0.0.0.0:27017/userDB').then(() => console.log('Connected!'));
-
-// Define user schema
-const userSchema = new mongoose.Schema({
-  username: String,
-  email: String,
-  password: String,
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
 });
 
-const User = mongoose.model('User', userSchema);
-
-app.use(bodyParser.json());
-app.use(cors()); // Enable CORS for all routes
-
-// Endpoint to handle user registration
-app.post('/register', async (req, res) => {
-  console.log(req.body);
+// Routes
+app.post('/api/register', async (req, res) => {
   try {
-    const newUser = new User({
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
-    });
+    const { username, email, password } = req.body;
 
+    // Validate input
+    if (!username || !email || !password) {
+      return res.status(400).json({ message: 'Username, email, and password are required' });
+    }
+
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: 'User with this email already exists' });
+    }
+   
+    // Create new user
+    const newUser = new User({ username, email, password }); // Use User model
     await newUser.save();
-    res.status(200).send('User registered successfully');
-  } catch (err) {
-    res.status(500).send(err.message);
+    res.status(201).json(newUser);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Failed to register user', error: error.message });
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+
+
+// for Login
+
+app.post('/api/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Validate input
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Email and password are required' });
+    }
+
+    // Check if user exists
+    const user = await User.findOne({ email, password });
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid email or password' });
+    }
+    else if(user.email== req.body.email && user.password== req.body.password){
+      return res.status(200).json({ message: 'Login successful', user });
+    }
+
+    // Login successful
+    // You can customize the response according to your needs
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Failed to login', error: error.message });
+  }
 });
+
+
+
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
