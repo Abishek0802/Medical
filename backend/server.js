@@ -49,32 +49,25 @@ app.post('/api/register', async (req, res) => {
 
 // for Login
 
+// for Login
 app.post('/api/login', async (req, res) => {
   try {
     const { email, password } = req.body;
-
-    // Validate input
-    if (!email || !password) {
-      return res.status(400).json({ message: 'Email and password are required' });
-    }
-
-    // Check if user exists
     const user = await User.findOne({ email, password });
-    if (!user) {
+
+    if (user) {
+      // If the user exists and email matches, respond with success
+      return res.status(200).json({ message: 'Login successful', email: user.email });
+    } else {
+      // If user doesn't exist or email doesn't match, respond with error
       return res.status(401).json({ message: 'Invalid email or password' });
     }
-    else if(user.email== req.body.email && user.password== req.body.password){
-      return res.status(200).json({ message: 'Login successful', user });
-    }
-
-    // Login successful
-    // You can customize the response according to your needs
-    
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Failed to login', error: error.message });
   }
 });
+
 
 
 

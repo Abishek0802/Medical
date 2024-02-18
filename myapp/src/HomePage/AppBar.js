@@ -71,13 +71,7 @@ class NavBar extends Component {
             }}
           >
             Ashok Medicals
-            <BarLoader
-              style={{ marginTop: "40%" }}
-              color="#000000"
-              height={5}
-              width={150}
-              speedMultiplier={0.3}
-            />
+           
           </Typography>
 
           {/* this is SidenavEmployee */}

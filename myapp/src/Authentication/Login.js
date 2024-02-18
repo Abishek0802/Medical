@@ -24,7 +24,12 @@ function Login() {
       setPassword('');
       setError('');
       // Redirect to home page after successful login
-      navigate('/');
+     
+       // Display alert if login is successful
+       alert(response.data.message);
+
+       // Redirect to register page regardless of success or failure
+       navigate('/HomePage');
     } catch (error) {
       console.error(error);
       setError('Invalid email or password');
