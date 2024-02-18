@@ -10,7 +10,7 @@ import OwnerProfile from "./Profiles/OwnerProfile";
 import EmployeeProfile from "./Profiles/EmployeeProfile";
 import UpdateOwner from "./ProfileUpdate/UpdateOwner";
 import UpdateEmployee from "./ProfileUpdate/UpdateEmployee";
-import Register from "./Authentication/Register";
+import CreeateAccount from "./Authentication/CreeateAccount";
 import Login from "./Authentication/Login"
 
 const HomePage =[<AppBar/>]
@@ -19,7 +19,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Register />} />
+      <Route path="/" element={<CreeateAccount />} />
         <Route path="/OwnerProfile/*" element={<OwnerProfile />} />
         <Route path="/EmployeeProfile/*" element={<EmployeeProfile />} />
         <Route path="/UpdateOwner/*" element={<UpdateOwner />} />

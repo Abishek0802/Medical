@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import "./CreeateAccount.css"
 
-function Register() {
+function CreeateAccount() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -39,10 +40,10 @@ function Register() {
   };
 
   return (
-    <div>
-      <h1>Registration Form</h1>
+    <div className='div'>
+      <h1>Register Account</h1>
       {error && <div className="error">{error}</div>}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='form'>
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required /><br />
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required /><br />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required /><br />
@@ -52,4 +53,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default CreeateAccount;
