@@ -5,6 +5,7 @@ import "./Register.css"
 
 function Register() {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate(); // useNavigate hook for navigation
 
@@ -13,13 +14,12 @@ function Register() {
     try {
       await axios.post('http://localhost:5000/register', {
         username,
+        email,
         password,
       });
       alert('User registered successfully');
-      // Redirect to Dummy.js or any other route after successful registration
-      if (username && password) {
-        navigate('HomePage'); // Use navigate function for navigation
-      }
+      // Redirect to HomePage or any other route after successful registration
+      navigate('/HomePage'); // Use navigate function for navigation
     } catch (err) {
       alert('Error registering user');
     }
@@ -30,12 +30,21 @@ function Register() {
       <h1>Register</h1>
       <form onSubmit={handleSubmit} className='inp'>
         <input
+        id="name"
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
+        id="email"
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+        id="pass"
           type="password"
           placeholder="Password"
           value={password}

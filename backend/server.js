@@ -7,11 +7,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/userDB').then(() => console.log('Connected!'));
+mongoose.connect('mongodb://0.0.0.0:27017/userDB').then(() => console.log('Connected!'));
 
 // Define user schema
 const userSchema = new mongoose.Schema({
   username: String,
+  email: String,
   password: String,
 });
 
@@ -22,9 +23,11 @@ app.use(cors()); // Enable CORS for all routes
 
 // Endpoint to handle user registration
 app.post('/register', async (req, res) => {
+  console.log(req.body);
   try {
     const newUser = new User({
       username: req.body.username,
+      email: req.body.email,
       password: req.body.password,
     });
 
