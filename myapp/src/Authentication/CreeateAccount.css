@@ -1,7 +1,6 @@
 .div {
     text-align: center;
     padding: 20px;
-    background-color: wheat;
     width: fit-content;
     height: fit-content;
     align-items: center;
@@ -9,11 +8,13 @@
     left: 40%;
     top: 30%;
     border-radius: 10px;
+        background: #f5deb3;
+        box-shadow:  -8px -8px 16px #111110;
 }
 
 .div > h1 {
     position: relative;
-    bottom: 30px;
+    bottom: 25px;
 }
 
 .form {

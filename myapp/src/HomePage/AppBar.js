@@ -11,7 +11,6 @@ import {
   Menu,
   Typography,
 } from "@mui/material";
-import BarLoader from "react-spinners/BarLoader";
 import React, { Component } from "react";
 import Content from "./Content.js";
 import SidenavEmployee from "./SidenavEmployee.js";

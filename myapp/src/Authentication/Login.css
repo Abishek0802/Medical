@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(0, 126, 140);
+    font-family:  "Ubuntu", sans-serif;
+}
+.login-div{
+    text-align: center;
+    width: 250px;
+    height: fit-content;
+    position: absolute;
+    left: 40% ;
+    top: 30%;
+    background: #f5deb3;
+    box-shadow:  -8px -8px 16px #111110;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    
+}
+.login-form>input{
+    height: 30px;
+    border-color: blue;
+    border-radius: 10px;
+    text-indent: 10px;
+    width: 95%;
+}
+.login-form>button{
+    border-radius: 5px;
+    color: blue;
+    height: 40px;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+.login-para{
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    color: #111110;
+}
